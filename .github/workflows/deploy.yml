@@ -26,25 +26,26 @@ jobs:
           git submodule update --init --recursive
           git submodule update --remote --merge
 
-      - name: Setup Bulma
-        run: |
-          cd themes/bulma
-          git checkout 0.9.4
-          cd ../..
+      # - name: Setup Bulma
+      #   run: |
+      #     cd themes/bulma
+      #     git checkout 0.9.4
+      #     cd ../..
 
       # Debug directory structure
-      - name: Check directory structure
-        run: |
-          cd themes/hugo-fresh
-          echo "=== Current Directory ==="
-          pwd
-          cat config.yaml
-          echo "=== Root Directory Content ==="
-          ls -la
-          find . -name "config.yaml"
+      # - name: Check directory structure
+      #   run: |
+      #     cd themes/hugo-fresh
+      #     echo "=== Current Directory ==="
+      #     pwd
+      #     cat config.yaml
+      #     echo "=== Root Directory Content ==="
+      #     ls -la
+      #     find . -name "config.yaml"
 
       - name: Build
         run: |
+          pwd
           hugo --minify
           if [ ! -f public/index.html ]; then
             echo "Error: Build failed - index.html not found!"
