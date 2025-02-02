@@ -1,0 +1,11 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'Blog Belajar Kode'
+theme = 'dream'
+defaultContentLanguage = 'en'
+
+[params]
+lightTheme = "emerald"
+darkTheme = "forest"
+
+avatar = "/img/gl.png"

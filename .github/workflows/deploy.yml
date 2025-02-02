@@ -1,0 +1,101 @@
+name: Deploy to AWS
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3 # Update ke v3
+        with:
+          submodules: 'recursive' # Ubah ke recursive untuk nested submodules
+          fetch-depth: 0 # Fetch semua history
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: 'latest'
+          extended: true
+
+      # Tambahkan step untuk memastikan submodules ter-update
+      - name: Update submodules
+        run: |
+          git submodule update --init --recursive
+          git submodule update --remote --merge
+
+      - name: Setup Bulma
+        run: |
+          cd themes/bulma
+          git checkout 0.9.4
+          cd ../..
+
+      # Debug directory structure
+      - name: Check directory structure
+        run: |
+          cd themes/hugo-fresh
+          echo "=== Current Directory ==="
+          pwd
+          cat config.yaml
+          echo "=== Root Directory Content ==="
+          ls -la
+          find . -name "config.yaml"
+
+      - name: Build
+        run: |
+          hugo --minify
+          if [ ! -f public/index.html ]; then
+            echo "Error: Build failed - index.html not found!"
+            exit 1
+          fi
+
+      - name: Execute remote commands
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.AWS_HOST }}
+          username: ${{ secrets.AWS_USERNAME }}
+          key: ${{ secrets.AWS_SSH_KEY }}
+          script: |
+            echo "=== Setting up directories ==="
+            # Hapus dan buat ulang directory public
+            sudo rm -rf /home/ubuntu/belajar-kode/public
+            sudo mkdir -p /home/ubuntu/belajar-kode/public
+
+            # Set permission untuk folder parent
+            sudo chmod o+x /home/ubuntu
+            sudo chmod o+x /home/ubuntu/belajar-kode
+
+            # Set permission untuk public folder
+            sudo chown ubuntu:ubuntu /home/ubuntu/belajar-kode/public
+            sudo chmod 755 /home/ubuntu/belajar-kode/public
+
+            echo "=== Checking permissions ==="
+            ls -la /home/ubuntu/
+            ls -la /home/ubuntu/belajar-kode/
+            ls -la /home/ubuntu/belajar-kode/public/
+
+      - name: Deploy to AWS
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.AWS_HOST }}
+          username: ${{ secrets.AWS_USERNAME }}
+          key: ${{ secrets.AWS_SSH_KEY }}
+          source: 'public/*'
+          target: '/home/ubuntu/belajar-kode/public/'
+          strip_components: 1
+          overwrite: true
+
+      - name: Final setup
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.AWS_HOST }}
+          username: ${{ secrets.AWS_USERNAME }}
+          key: ${{ secrets.AWS_SSH_KEY }}
+          script: |
+            echo "=== Checking final structure ==="
+            sudo ls -la /home/ubuntu/belajar-kode/public/
+
+            echo "=== Restarting nginx ==="
+            sudo systemctl restart nginx
