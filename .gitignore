@@ -1,6 +1,7 @@
 # Hugo build output
 /public/
 /resources/
+public.zip
 
 # Configuration and cache files
 hugo_stats.json
