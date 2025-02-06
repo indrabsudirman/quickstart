@@ -15,10 +15,10 @@ tags:
   - senior
   - software-engineer
 # nolastmod: true
-draft: false
+draft: true
 ---
 
-Ini satu-satunya post pertama saya dalam bahasa Indonesia yang saya buat khusus untuk cerita om Yohanes.
+Ini satu-satunya post saya dalam bahasa Indonesia yang saya buat khusus untuk cerita om Yohanes.
 
 <!--more-->
 

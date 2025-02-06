@@ -14,7 +14,7 @@ tags:
   - software-engineer
   - switching-career
 # nolastmod: true
-draft: false
+draft: true
 ---
 
 I am switching my career from being a teacher to a software engineer.
