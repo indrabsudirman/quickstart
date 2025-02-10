@@ -9,3 +9,14 @@ lightTheme = "emerald"
 darkTheme = "forest"
 
 avatar = "/img/gl.png"
+showTableOfContents = true
+showSummaryCoverInPost = true
+imageZoomableInPost = true
+showPrevNextPost = true
+
+[markup]
+[markup.highlight]
+noClasses = false
+
+[markup.goldmark.renderer]
+unsafe = true
