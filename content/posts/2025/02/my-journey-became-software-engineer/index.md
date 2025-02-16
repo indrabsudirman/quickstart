@@ -29,3 +29,13 @@ During 2020 - 2022, while I was actively looking for a job, I was active improvi
 [Koinworks](https://www.koinworks.com) with help from [om Yohanes](https://www.facebook.com/yohanes) (my story about om Yohanes, I wrote [here).](/posts/om-yohanes)
 
 In the first three months at Koinworks, I joined the [Koinworks Engineer Development Program with Go.](https://drive.google.com/file/d/17cUk8Jkuk9Q2Wx44Jnv8KS6OBzKsxi0i/view) Here, I learned about Golang and many best practices in software engineering that I had never learned at university, such as avoiding storing passwords in plaintext in the database — they must be hashed with salt.
+
+Since there is a lot of backend engineering at Koinworks and only a little Automation Engineering, I transitioned into an Automation Engineer role. As a result, I have continued working at Koinworks until now. In this role, I have gained experience in automation testing, CI/CD, and various other aspects of software testing. My initial learning focused on Selenium, Appium, RestAssured, and TestNG, which are the main technologies I use in my daily work at Koinworks.
+
+Since September 2024, I have moved to [Hijra](https://hijra.id/), where I continue to work as an Automation Engineer. Here, I have learned about automation testing technologies such as TypeScript, Playwright, Cypress, and WebdriverIO.
+
+I really enjoy my role as an automation engineer, and I've learned a lot here. I'm excited to continue learning and growing in this field. That’s my journey to becoming a software engineer. I hope this inspires anyone who wants to switch careers to software engineering, even after turning 30.
+
+Remember, it's never too late as long as you're willing to put in the effort and give it a try. It's better to try than to regret it later.
+
+South Tangerang, 4 Februari 2025
