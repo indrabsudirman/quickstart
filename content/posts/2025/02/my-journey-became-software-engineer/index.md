@@ -21,6 +21,8 @@ I am switching my career from being a teacher to a software engineer.
 
 <!--more-->
 
+<p align="center"><b>﷽</b></p>
+
 I am switching my career from being a teacher to a software engineer. The journey started in 2013 when I was a teacher in a private school in [Poris Indah](https://www.porisindah.sch.id/), Tangerang. I taught Computer Science to elementary school students. I think being a software engineer is exciting and challenging, a software engineer able to make an instruction to a computer to do something and I think the computer skills will be useful in the future.
 
 During 2013 - 2015, I learned basic programming languages like C. I watched some tutorials on YouTube, but I failed to understand even basic concepts such as variables and functions. In 2016, I decided to came in University of [Indraprasta PGRI](https://unindra.ac.id/) Jakarta Selatan to study Computer Science. In 2020, I graduated but it was pandemic so I was not able to find a job as a software engineer.
