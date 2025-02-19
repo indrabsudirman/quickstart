@@ -1,11 +1,12 @@
 ---
 title: Page Object Model Pattern for Selenium WebDriver and Java
 date: 2025-02-16T23:07:59+07:00
-lastmod: 2025-02-16T23:07:59+07:00
+lastmod: 2025-02-19T09:07:59+07:00
 author: Indra Sudirman
 avatar: /img/indra.png
 # authorlink: https://author.site
-# cover: /img/cover.jpg
+# image geneated from chatGPT https://chatgpt.com/share/67b53d89-af4c-8009-9797-1a85386afe08
+cover: webdriver-selenium-pom-java.png
 # images:
 #   - /img/cover.jpg
 categories:
@@ -53,7 +54,6 @@ Page Object Model is a Design pattern for writing Selenium automated test script
 
 The automated test scripts looks like (Linear test script) :
 
-      ```java
       1 import static org.junit.jupiter.api.Assertions.assertEqual;
       2 import org.openqa.selenium.By;
       3 import org.openqa.selenium.WebDriver;
@@ -121,7 +121,6 @@ The automated test scripts looks like (Linear test script) :
       65
       66         browser.quit();
       67 }
-      ```
 
 The script above (Linear test script) are put all process in one class, like : `initialisation`, `go to website`, `log in`,
 `navigate back to home page`, `select the first product`, `add 1 item to the shopping cart`, `proceed to checkout`,
@@ -156,61 +155,58 @@ The automated test scripts will looks like :
     13         wait = new WebDriverWait(browser, 10);
     14     }
     15
-    16     }
-    17 }
+    16 }
     ```
 
   - create `LoginPage`
 
     ```java
-    package pages;
+    1  package pages;
+    2
+    3  import org.openqa.selenium.By;
+    4  import org.openqa.selenium.WebDriver;
+    5  import org.openqa.selenium.WebElement;
+    6  import org.openqa.selenium.support.ui.ExpectedConditions;
+    7
+    8  public class LoginPage extends BasePage {
+    9      private By emailAddressLocator = By.id("email");
+    10     private By passwordTextboxLocator = By.id("passwd");
+    11     private By signInButtonLocator = By.id("SubmitLogin");
+    12
+    13     public LoginPage(WebDriver browserDriver) {
+    14         super(browserDriver);
+    15         wait.until(ExpectedConditions.visibilityOfElementLocated(emailAddressLocator));
+    16     }
+    17
+    18     public UserAccountPage login(String emailAddress, String password) {
+    19         setEmailAddress(emailAddress);
+    20         setPassword(password);
+    21         return clickSignInButton();
+    22     }
+    23
+    24     private LoginPage setEmailAddress(String emailAddress) {
+    25         wait.until(ExpectedConditions.visibilityOfElementLocated(emailAddressLocator));
+    26         WebElement emailTextbox = browser.findElement(emailAddressLocator);
+    27         emailTextbox.clear();
+    28         emailTextbox.sendKeys(emailAddress);
+    29         return this;
+    30     }
+    31
+    32     private LoginPage setPassword(String password) {
+    33         wait.until(ExpectedConditions.visibilityOfElementLocated(passwordTextboxLocator));
+    34         WebElement passwordTextbox = browser.findElement(passwordTextboxLocator);
+    35         passwordTextbox.clear();
+    36         passwordTextbox.sendKeys(password);
+    37         return this;
+    38     }
+    39
+    40     private UserAccountPage clickSignInButton() {
+    41         wait.until(ExpectedConditions.elementToBeClickable(signInButtonLocator));
+    42         browser.findElement(signInButtonLocator).click();
+    43         return new UserAccountPage(browser);
+    44     }
+    45 }
 
-    import org.openqa.selenium.By;
-    import org.openqa.selenium.WebDriver;
-    import org.openqa.selenium.WebElement;
-    import org.openqa.selenium.support.ui.ExpectedConditions;
-
-    public class LoginPage extends BasePage {
-        private By emailAddressLocator = By.id("email");
-        private By passwordTextboxLocator = By.id("passwd");
-        private By signInButtonLocator = By.id("SubmitLogin");
-
-        public LoginPage(WebDriver browserDriver) {
-            super(browserDriver);
-            // wait for page to load
-            wait.until(ExpectedConditions.visibilityOfElementLocated(emailAddressLocator));
-        }
-
-        public UserAccountPage login(String emailAddress, String password) {
-            setEmailAddress(emailAddress);
-            setPassword(password);
-            clickSignInButton();
-            return new UserAccountPage(browser);
-        }
-
-        private LoginPage setEmailAddress(String emailAddress) {
-            wait.until(ExpectedConditions.visibilityOfElementLocated(emailAddressLocator));
-            WebElement emailTextbox = browser.findElement(emailAddressLocator);
-            emailTextbox.clear();
-            emailTextbox.sendKeys(emailAddress);
-            return this;
-        }
-
-        private LoginPage setPassword(String password) {
-            wait.until(ExpectedConditions.visibilityOfElementLocated(passwordTextboxLocator));
-            WebElement passwordTextbox = browser.findElement(passwordTextboxLocator);
-            passwordTextbox.clear();
-            passwordTextbox.sendKeys(password);
-            return this;
-        }
-
-        private UserAccountPage clickSignInButton() {
-            wait.until(ExpectedConditions.elementToBeClickable(signInButtonLocator));
-            WebElement signInButton = browser.findElement(signInButtonLocator);
-            signInButton.click();
-            return new UserAccountPage(browser);
-        }
-    }
     ```
 
   - create `HomePage`
@@ -442,7 +438,6 @@ and compact readable.
 To make this work, we need to change our `LoginPage` objects so these methods here return a `LoginPage` object. We do that. Instead of
 having void methods. So `LoginPage` with Fluid Syntax will looks like `(Added return keyword)` :
 
-          ```java
           1 package pages;
           2
           3 import org.openqa.selenium.By;
@@ -491,7 +486,6 @@ having void methods. So `LoginPage` with Fluid Syntax will looks like `(Added re
           46         return new UserAccountPage(browser);
           47     }
           48 }
-          ```
 
 and we can call like this :
 
