@@ -32,7 +32,7 @@ Berkat bimbingan om Yohanes juga, saya tidak ragu untuk kuliah S1 lagi di Teknik
 Dalam perjalanan saya switch career menjadi seorang software engineer ([saya tulis disini),](/posts/my-journel-became-software-engineer) om Yohanes sangat membantu saya. Setelah lulus Informatika tahun 2020 - 2022 saya aktif belajar membuat project, dan ini setiap mentog, ga ngerti saya selalu tanya om Yohanes. Alhamdulillah beliau sangat baik menjawab, menjelaskan sampai saya benar-benar mengerti.
 Ketika saya mendapatkan pekerjaan pertama sebagai software engineer, ini juga karena bantuan om Yohanes.
 
-Sampai saat ini, setiap saya stuck mentog, tidak mengerti berkaitan dengan programmer bahkan masalah lainnya, saya selalu minta petunjuk om Yohanes, saya berdoa semoga semua kebaikan beliau kepada saya dibalas dengan kebaikan yang berlipat ganda oleh **الله سبحانه وتعالى**
+Sampai saat ini, setiap saya stuck mentog, tidak mengerti berkaitan dengan programming bahkan masalah lainnya, saya selalu minta petunjuk om Yohanes, terkadang misalnya dari om Yohanes tidak bisa memberikan jawaban langsung, tidak tahu kenapa setelah cerita sama om Yohanes, jadi tiba-tiba kepikiran solusi yang perlu dicoba. Saya berdoa semoga semua kebaikan beliau kepada saya dibalas dengan kebaikan yang berlipat ganda oleh **الله سبحانه وتعالى**
 
 Saya sangat ingat Sayyidina Ali **كرم الله وجهه**, berkata :
 
@@ -40,6 +40,6 @@ Saya sangat ingat Sayyidina Ali **كرم الله وجهه**, berkata :
 
 "Saya hamba bagi siapa yang mengajari saya walaupun itu hanya satu huruf"
 
-Sayyidina Ali sangat menghargai ilmu dan siapapun yang mengajari beliau walaupun hanya satu huruf. Dari _quote_ ini, saya jadi semakin ingat om Yohanes atas semua kebaikan om Yohanes kepada saya.😭
+Sayyidina Ali sangat menghargai ilmu dan siapapun yang mengajari beliau walaupun hanya satu huruf. Dari _quote_ ini, saya jadi semakin ingat (InsyaAllah akan selalu diingat) om Yohanes atas semua kebaikan om Yohanes kepada saya 😭 padahal awal perkenalan saya dengan om Yohanes hanya lewat internet saja.
 
 Tulisan ini mungkin akan saya update kemudian hari, ini hanya sebagian catatan kecil dari saya tentang kebaikan om Yohanes.
