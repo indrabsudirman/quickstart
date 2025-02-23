@@ -216,4 +216,5 @@ If we want to run the a little more complex test, we can run the test `maestro t
 
 Maestro is a simple and easy to use. Since Maestro is built on learnings from its predecessors (Appium, Espresso, UIAutomator, XCTest, Selenium, Playwright) wish it's could be as good as them.
 
+For more information, you could check the [Maestro](https://docs.maestro.dev/) website.
 That's my notes.
