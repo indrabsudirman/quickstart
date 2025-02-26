@@ -115,7 +115,7 @@ Given I go to the "{page}" page
 ```
 
 ```java
-// Mapping halaman untuk menjaga skenario tetap deklaratif
+// Page mapping to keep scenarios declarative
 private static final Map<String, String> pages = Map.of(
     "login", "https://example.com/login",
     "dashboard", "https://example.com/dashboard",
@@ -162,7 +162,7 @@ Examples:
 ```
 
 ```java
-// Mapping halaman untuk menjaga skenario tetap deklaratif
+// Page mapping to keep scenarios declarative
 private static final Map<String, String> pages = Map.of(
     "login", "https://example.com/login",
     "dashboard", "https://example.com/dashboard",
