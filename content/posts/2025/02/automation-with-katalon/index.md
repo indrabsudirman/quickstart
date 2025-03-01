@@ -1,7 +1,7 @@
 ---
-title: Automation With Katalon
+title: Automation With Katalon (Mobile Testing)
 date: 2025-02-28T19:19:10+07:00
-lastmod: 2025-02-28T19:19:10+07:00
+lastmod: 2025-03-01T19:19:10+07:00
 author: Indra Sudirman
 avatar: /img/indra.png
 # authorlink: https://author.site
