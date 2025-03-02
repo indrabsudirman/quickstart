@@ -13,7 +13,7 @@ categories:
   - automation
   - katalon
 tags:
-  - katalon
+  - katalon-mobile-testing
   - automation
   - qa-automation
   - software-engineer
