@@ -108,11 +108,38 @@ in my case, I'm continue to create simple step to search and set text `Android`.
 ## Mobile Testing (iOS)
 
 - click on Katalon sample project
+
   - click on `Sample iOS Mobile Tests Project` wait until the project is loaded
     ![katalon-sample-project](/posts/2025/02/automation-with-katalon-mobile-testing/katalon-sample-project-android-ios.png)
   - Fill the fill new project form then click `OK`
-    ![new-project-mobile](/posts/2025/02/automation-with-katalon-mobile-testing/new-project-mobile.png)
-- click Record Mobile
-  ![record-mobile-icon](/posts/2025/02/automation-with-katalon-mobile-testing/record-mobile-icon.png)
+    ![new-project-mobile](/posts/2025/02/automation-with-katalon-mobile-testing/new-project-mobile-ios.png)
+  - click Record Mobile
+    ![record-mobile-icon](/posts/2025/02/automation-with-katalon-mobile-testing/record-mobile-icon.png)
+    > There is a little bit difference between `Android` and `iOS`. In `iOS` you need to select `iOS` simulator in the `Device Type` field without run the simulator first.
+    > ![device-list-name-ios-simulator](/posts/2025/02/automation-with-katalon-mobile-testing/device-list-name-ios-simulator.png)
+  - click Start - Wait for a while till the app successfully loaded. - If you encounter issue like this:
+    ![could-not-start-response-500](/posts/2025/02/automation-with-katalon-mobile-testing/could-not-start-response-500.png) some tips:
+    - Update the Appium log level to `Debug` in Katalon Settings Mobile. This will help you to debug the issue.
+    - Follow some tips in the link [common webdriveragent installation issues](https://docs.katalon.com/katalon-studio/troubleshooting/troubleshoot-mobile-automated-testing/common-webdriveragent-installation-issues)
+  - Now, you can start to record your test case.
+    ![mobile-recorder-successfuly-loaded-ios](/posts/2025/02/automation-with-katalon-mobile-testing/mobile-recorder-successfuly-loaded-ios.png)
 
-That's it my notes.
+  - Let's do some simple test case, similar to Android above.
+    - Click on `Search Wikipedia` (marked in no 1).
+      ![start-record-mobile-ios](/posts/2025/02/automation-with-katalon-mobile-testing/start-record-mobile-ios.png)
+    - Click `Tap` (marked in no 2).
+      ![click-tap-search-wikipedia](/posts/2025/02/automation-with-katalon-mobile-testing/click-tap-search-wikipedia.png)
+    - The `Tap` action above will redirect to the Edit Text `Search Wikipedia`.
+      ![edittext-search-wikipedia-ios](/posts/2025/02/automation-with-katalon-mobile-testing/edittext-search-wikipedia-ios.png)
+    - Click `Set Text` and fill `Android`.
+      ![fill-android-edittext-search-wikipedia-ios](/posts/2025/02/automation-with-katalon-mobile-testing/fill-android-edittext-search-wikipedia-ios.png)
+    - Finally, the Android result will appear.
+      ![final-page-wikipedia-ios](/posts/2025/02/automation-with-katalon-mobile-testing/final-page-wikipedia-ios.png)
+    - Now you can save the script, by click `Save Script` button.
+      - In my case I name the testcase as `User able to search at EditText Search`.
+        ![save-the-script-and-name-the-testcase](/posts/2025/02/automation-with-katalon-mobile-testing/save-the-script-and-name-the-testcase.png)
+    - So when click `Run` button, the choose IOS simulator will appear.
+      ![run-ios](/posts/2025/02/automation-with-katalon-mobile-testing/run-ios.png)
+    - Finally, the result will appear.
+      ![ios-passed](/posts/2025/02/automation-with-katalon-mobile-testing/ios-passed.png)
+      That's it my notes.
