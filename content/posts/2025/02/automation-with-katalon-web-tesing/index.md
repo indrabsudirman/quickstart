@@ -18,7 +18,7 @@ tags:
   - qa-automation
   - software-engineer
 # nolastmod: true
-draft: false
+draft: true
 ---
 
 This discussion is part of my notes on the Katalon Automation Framework series. Now, I will focus on web testing.
