@@ -5,7 +5,7 @@ lastmod: 2025-03-19T23:26:32+07:00
 author: Indra Sudirman
 avatar: /img/indra.png
 # authorlink: https://author.site
-# cover: /img/cover.jpg
+cover: python-oop.png
 # images:
 #   - /img/cover.jpg
 categories:
