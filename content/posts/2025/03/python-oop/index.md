@@ -10,6 +10,7 @@ cover: python-oop.png
 #   - /img/cover.jpg
 categories:
   - python
+  - programming language
 tags:
   - python
   - oop
