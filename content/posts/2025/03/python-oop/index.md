@@ -348,6 +348,75 @@ and the correct code should be **move the `formerCompany` variable to the `__ini
 18 print("Former Company:", c2.formerCompany)
 ```
 
+### Implementing Methods in a Class
+
+Previously, we have tried to adding properties to a class. Now, how about to comunicate among properties? **To achieve this, we can use methods to comunicate among properties.**
+
+In Python, there are some type of methods:
+
+1. Instance Method
+2. Class Method
+3. Static Method
+
+Here is the table comparison:
+
+| Method Type         | Uses `self`? | Uses `cls`? | Can Access Instance Attributes? | Can Access Class Attributes? |
+| ------------------- | ------------ | ----------- | ------------------------------- | ---------------------------- |
+| **Instance Method** | ✅ Yes       | ❌ No       | ✅ Yes                          | ✅ Yes                       |
+| **Class Method**    | ❌ No        | ✅ Yes      | ❌ No                           | ✅ Yes                       |
+| **Static Method**   | ❌ No        | ❌ No       | ❌ No                           | ❌ No                        |
+
+#### Instance Method
+
+An instance method is a method that is associated with an instance of a class. It has access to instance attributes and can modify them.
+
+To create an instance method, we need to add a parameter `self` to the method definition. The `self` parameter is a reference to the instance of the class. Here is the example:
+
+```python
+1 class Car:
+2    def __init__(self, brand, speed):
+3        self.brand = brand  # Atribut instance
+4        self.speed = speed  # Atribut instance
+5
+6    def accelerate(self, increase):
+7        self.speed += increase  # Update atribut instance
+8        print(f"{self.brand} is now going at {self.speed} km/h")
+9
+10 car1 = Car("Toyota", 50)
+11 print(car1.speed) # Output: 50
+12 car1.accelerate(20)  # Update speed only for car1 (50 + 20 = 70)
+```
+
+The question is, when we use Instance Method? We need to use Instance Method when we want to modify the instance attributes.
+
+#### Class Method
+
+A class method is a method that is associated with a class rather than an instance. It has access to class attributes and can modify them. It is defined using the `@classmethod` decorator. Here is the example:
+
+```python
+class Example:
+    class_variable = "Class level"
+
+    @classmethod # define class method using @classmethod decorator
+    def class_method(cls):
+        print(f"This is a class method: {cls.class_variable}")
+
+Example.class_method()  # Call on the class itself
+```
+
+#### Static Method
+
+A static method is a method that is associated with a class but does not depend on an instance. It has no access to instance attributes or class attributes. It is defined using the `@staticmethod` decorator. Here is the example:
+
+```python
+class Example:
+    @staticmethod # define static method using @staticmethod decorator
+    def static_method():
+        print("This is a static method.")
+
+Example.static_method()  # Can be called without an instance
+```
+
 To be continued...
 
 ```
