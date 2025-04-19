@@ -17,7 +17,7 @@ tags:
   - stress testing
   - load testing
 # nolastmod: true
-draft: true
+draft: false
 ---
 
 JMeter is powerful tool for load testing. This guide provides a simple sample to set up and run a load test for for REST API using JMeter.
