@@ -25,6 +25,8 @@ The goal of Katalon and qTest integration is to enable seamless communication be
 
 <!--more-->
 
+<p align="center">﷽</p>
+
 ## Background
 
 If you read my previous post [How to Integrate Katalon with qTest](/posts/2025/04/intergration-qtest-in-katalon/)
