@@ -6,7 +6,7 @@ author: Indra Sudirman
 avatar: /img/indra.png
 # authorlink: https://author.site
 # image geneated from chatGPT https://chatgpt.com/share/67b53d89-af4c-8009-9797-1a85386afe08
-cover: webdriver-selenium-pom-java.png
+cover: webdriver-selenium-pom-java.webp
 # images:
 #   - /img/cover.jpg
 categories:

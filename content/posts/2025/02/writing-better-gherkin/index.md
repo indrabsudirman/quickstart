@@ -6,7 +6,7 @@ author: Indra Sudirman
 avatar: /img/indra.png
 # authorlink: https://author.site
 # https://chatgpt.com/share/67b8a04f-6e84-8009-8a50-7f02c82812ed
-cover: writing-better-gherkin-cucumber.png
+cover: writing-better-gherkin-cucumber.webp
 # images:
 #   - /img/cover.jpg
 categories:
